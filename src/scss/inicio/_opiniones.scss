@@ -1,0 +1,25 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.opiniones {
+    background-color: v.$blanco;
+    margin-top: -10rem;
+    border-top-right-radius: 2.5rem;
+    border-top-left-radius: 2.5rem;
+}
+.opiniones__contenido {
+    padding: 10rem 5rem;
+}
+.opinion {
+    background-color: v.$cafeClaro;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.opinion__autor {
+    color: v.$primario;
+    font-size: 2rem;
+    text-align: right;
+    font-family: v.$fuenteSecundaria;
+}

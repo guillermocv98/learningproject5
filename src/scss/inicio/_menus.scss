@@ -1,0 +1,70 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.menus {
+    background-image: url(../img/menu_arriba.svg), url(../img/menu_abajo.svg), linear-gradient(to top, v.$primario, v.$primario);
+    background-repeat: no-repeat;
+    background-position: center 5rem, center 95%, 100%;
+    background-size: 200%;
+    padding: 10rem 5rem 30rem 5rem;
+    @include m.tablet {
+        background-size: 100%;
+        background-position: center 5rem, center 90%, 100%;
+        padding: 12rem 0 30rem 0;
+    }
+    @include m.desktop {
+        background-size: 75%, 75%, 100%;
+    }
+}
+.menus__heading {
+    color: v.$blanco;
+    span {
+        display: block;
+        font-size: 1.8rem;
+    }
+}
+.menus__grid {
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8rem;
+    }
+}
+.menu__heading {
+    color: v.$blanco;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+
+    &:last-of-type {
+        margin-top: 3rem;
+    }
+}
+.menu__info {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu__opcion {
+    background-color: rgb(0 0 0 / .2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+
+    p {
+        color: v.$blanco;
+        line-height: 1.5;
+        padding: 0 .5rem;
+        margin: 1rem 0;
+    }
+    span {
+        display: block;
+        color: v.$secundario;
+    }
+}
+.menu__precio {
+    font-size: 3rem;
+    font-weight: 700;
+}

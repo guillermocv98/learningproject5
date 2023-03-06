@@ -1,0 +1,50 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+    background-color: v.$primario;
+}
+.footer__contenido {
+    background-color: v.$blanco;
+    padding: 5rem;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.footer__card {
+    font-family: v.$fuenteSecundaria;
+    text-align: center;
+
+    p, a {
+        color: v.$negro;
+        font-size: 2rem;
+        line-height: 1.2;
+
+        @include m.tablet {
+            font-size: 1.6rem;
+        }
+        @include m.desktop {
+            font-size: 2rem;
+        }
+    }
+    .llamar:hover {
+        transform: scale(1.2);
+    }
+}
+.footer__heading {
+    color: v.$secundario;
+    font-family: v.$fuenteSecundaria;
+    font-size: 2.4rem;
+    margin: 0 0 1rem 0;
+}
+.copyright {
+    color: v.$cafeClaro;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+}

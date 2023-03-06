@@ -1,0 +1,37 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.principal--menu {
+    padding-bottom: 0;
+}
+
+.ingredientes {
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 4rem;
+    }
+}
+
+.ingredientes__img,
+.ingredientes__texto {
+    flex: 1;
+}
+
+.ingredientes__img {
+    img {
+        width: 100%;
+    }
+}
+
+.ingredientes__texto {
+    padding: 0 2rem;
+    @include m.tablet {
+        text-align: left;
+    }
+}
+
+.footer__contenido--menu {
+    border-radius: 2.5rem;
+}
